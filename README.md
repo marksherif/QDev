@@ -1,1 +1,3 @@
-# QDev
+# Quantum Software Development
+
+Hi there!
