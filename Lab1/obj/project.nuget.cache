@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vL9RGkTAyNNDh+XZXBqEx0dJUYiIzMvyBj4fckVyVKWi72+7ZXKPyOJ5Q//Viyb7psr5XvPYNP8B+zXWQMaAKw==",
+  "dgSpecHash": "MlujFK5vGYh/iNhWLuphjp/CHIVArFO87BJLhy08lI6umGGPy+ouQEUAz9yEnE7H/wXb/ZhAlvKx58gSihEFxA==",
   "success": true,
-  "projectFilePath": "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/project.csproj",
+  "projectFilePath": "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/project.csproj",
   "expectedPackageFiles": [
     "/Users/mark/.nuget/packages/bond.core.csharp/9.0.3/bond.core.csharp.9.0.3.nupkg.sha512",
     "/Users/mark/.nuget/packages/bond.csharp/9.0.3/bond.csharp.9.0.3.nupkg.sha512",

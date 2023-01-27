@@ -7634,11 +7634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/project.csproj",
+      "projectUniqueName": "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/project.csproj",
       "projectName": "project",
-      "projectPath": "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/project.csproj",
+      "projectPath": "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/project.csproj",
       "packagesPath": "/Users/mark/.nuget/packages/",
-      "outputPath": "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/obj/",
+      "outputPath": "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mark/.nuget/NuGet/NuGet.Config"

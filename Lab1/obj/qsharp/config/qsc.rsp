@@ -1,10 +1,10 @@
 --proj
-    "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/project"
+    "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/project"
 --input
-    "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/Lab1.qs"
-    "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/Lab1Tests.qs"
+    "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/Lab1.qs"
+    "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/Lab1Tests.qs"
 --output
-    "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/obj/qsharp/"
+    "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/obj/qsharp/"
 --references
     "/Users/mark/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll"
     "/Users/mark/.nuget/packages/microsoft.quantum.compiler/0.25.218240/lib/netstandard2.1/Microsoft.Quantum.BondSchemas.dll"
@@ -39,7 +39,7 @@
 --skip-targeting
 --skip-monomorphization
 --package-load-fallback-folders
-    "/Users/mark/Tufts/Semester 2/Quantum Dev/Lab1/bin/Debug/net6.0/"
+    "/Users/mark/Tufts/Semester 2/Quantum Dev/QDev/Lab1/bin/Debug/net6.0/"
 --assembly-properties
     DocsPackageId:project
     ExecutionTarget:Any
