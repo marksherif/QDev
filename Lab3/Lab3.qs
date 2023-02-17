@@ -12,6 +12,7 @@ namespace Lab3 {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Convert;
 
     /// # Summary
     /// In this exercise, you are given two qubits. Both qubits are in
@@ -302,8 +303,13 @@ namespace Lab3 {
     /// ## register
     /// A two-qubit register in the |00> state.
     operation Challenge1 (register : Qubit[]) : Unit {
-        // TODO
-        fail "Not implemented.";
+        // Multiply the scalar value by the qubit
+        let angle = 2.0 * ArcCos(Sqrt(2.0) / Sqrt(3.0));
+        Ry(angle, register[0]);
+
+        X(register[0]);
+        Controlled H([register[0]], register[1]);
+        X(register[0]);
     }
 
 
@@ -320,8 +326,15 @@ namespace Lab3 {
     /// ## register
     /// A three-qubit register in the |000> state.
     operation Challenge2 (register : Qubit[]) : Unit {
-        // TODO
-        fail "Not implemented.";
+        // Multiply the scalar value by the qubit
+        let angle = 2.0 * ArcCos(Sqrt(1.0) / Sqrt(3.0));
+        Ry(angle, register[0]);
+
+        Controlled H([register[0]], register[1]);
+        CNOT(register[1], register[2]);
+        CNOT(register[0], register[1]);
+        
+        X(register[0]);
     }
 
 
@@ -364,8 +377,27 @@ namespace Lab3 {
     /// faster than classical computers once we get to quantum algorithms, but
     /// this is a good first hint.
     operation Challenge3 (register : Qubit[]) : Unit {
-        // TODO
-        fail "Not implemented.";
+        // Ry(0.0, register[0]);
+        // Ry(ArcSin(IntAsDouble(1) / Sqrt(IntAsDouble(2))), register[1]);
+        // Ry(1.0, register[2]);
+        // Ry(ArcSin(IntAsDouble(1) / Sqrt(IntAsDouble(2))), register[3]);
+        // Ry(0.0, register[4]);
+        // Ry(ArcSin(IntAsDouble(-1) / Sqrt(IntAsDouble(2))), register[5]);
+        // Ry(-1.0, register[6]);
+        // Ry(ArcSin(IntAsDouble(-1) / Sqrt(IntAsDouble(2))), register[7]);
+
+        let sineWave = [0.0, 1.0 / Sqrt(2.0), 1.0, 1.0 / Sqrt(2.0), 0.0, -1.0 / Sqrt(2.0), -1.0, -1.0 / Sqrt(2.0)];
+
+        for i in 0 .. 7 {
+            let amplitude = sineWave[i];
+            let theta = 2.0 * PI() * amplitude;
+            let alpha = Cos(theta / 2.0);
+            let beta = Sin(theta / 2.0);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+        }
+
     }
 
 
@@ -392,7 +424,16 @@ namespace Lab3 {
     /// ## register
     /// A three-qubit register in the |000> state.
     operation Challenge4 (register : Qubit[]) : Unit {
-        // TODO
-        fail "Not implemented.";
+        let sineWave = [1.0, 1.0 / Sqrt(2.0), 0.0, -1.0 / Sqrt(2.0), -1.0, -1.0 / Sqrt(2.0), -1.0, 0.0, 1.0 / Sqrt(2.0)];
+
+        for i in 0 .. 7 {
+            let amplitude = sineWave[i];
+            let theta = 2.0 * PI() * amplitude;
+            let alpha = Cos(theta / 2.0);
+            let beta = Sin(theta / 2.0);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+            Ry(2.0 * ArcTan2(beta, alpha), register[3%i]);
+        }
     }
 }
